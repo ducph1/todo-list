@@ -1,6 +1,6 @@
 # Todo list
 
-## _html, css, js (localstorage, plain js)
+## _html, css, js (localstorage, plain js)_
 
 ## Features
 - CRUD todo
