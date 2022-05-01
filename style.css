@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+:root {
+  --blue: #3c87ff;
+  --white: #ffffff;
+  --gray: #ccc;
+  --black: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background: var(--blue);
+}
+
+.wrapper {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 20px 5px;
+}
+
+.task-input {
+  height: 50px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.task-input i {
+  position: absolute;
+  top: 50%;
+  transform: translate(15px, -50%);
+}
+
+.task-input input {
+  padding: 0 20px 0 50px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #999;
+  font-size: 16px;
+}
+
+.task-input input::placeholder {
+  color: #333;
+}
+
+.controls, .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  cursor: pointer;
+}
+.controls .filter span {
+  margin-right: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.controls .filter span.active {
+  color: var(--blue)
+}
+
+
+.controls button {
+  border-radius: 5px;
+  background: var(--blue);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.controls button:hover {
+  opacity: 0.8;
+}
+
+.task-box {
+  margin: 10px 0 10px;
+}
+
+.task-box .task {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.task-box span.empty {
+  margin-top: 20px;
+}
+.task label {
+  display: flex;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+}
+
+.task input {
+  margin-right: 10px;
+}
+
+.settings {
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.settings .setting-menu {
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 0.2s ease;
+}
+
+.settings .setting-menu.show {
+  transform: scale(1);
+}
+
+.setting-menu li {
+  padding: 5px 10px;
+  display: flex;
+  align-items:center;
+  margin-bottom: 5px;
+  transition: all ease 0.2s;
+  border-radius: 5px;
+}
+
+.setting-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.setting-menu li:hover {
+  background: var(--gray);
+}
+
+.setting-menu li i {
+  margin-right: 10px;
+}
